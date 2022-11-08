@@ -21,13 +21,9 @@ export const BlogPage = () => {
   const [blog, setBlog] = useState(null);
   useEffect(() => {
     if (link) {
-      axios
-        .get(
-          `https://ipfs.filebase.io/ipfs/QmZJrLq2SC5qsMRKzNQnyZsWzV5m2oiZTRu7SuhKEmGiaD`
-        )
-        .then((resp) => {
-          setBlog(resp.data);
-        });
+      axios.get(`${process.env.REACT_APP_BACKEND_URL}/${link}`).then((resp) => {
+        setBlog(resp.data);
+      });
     }
   }, []);
 

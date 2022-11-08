@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 
 import { IndividualBlog } from "../IndividualBlog/IndividualBlog";
 
+import "./HomePage.css";
+
 import { Row, Col } from "antd";
 import axios from "axios";
 
@@ -10,45 +12,74 @@ export const HomePage = () => {
 
   useEffect(() => {
     axios
-      .get(
-        "https://ipfs.filebase.io/ipfs/QmSe6jJF5s6XWvD4N7NEPn9AEjxa337BPF1iY2E1qJm86K"
-      )
+      .get(`${process.env.REACT_APP_BACKEND_URL}`)
       .then((resp) => {
         resp.data = resp.data.split("\n");
         resp.data.shift();
         let blogData = [];
         resp.data.map((blog) => {
           blog = blog.split(",");
-          blogData.push({
+          return blogData.push({
             heading: blog[0],
             description: blog[1],
             link: blog[2],
           });
         });
+        blogData.pop();
         setListOfBlogs(blogData);
+      })
+      .catch((err) => {
+        console.log(err);
       });
   }, []);
 
   return (
-    <div>
-      <Row>
+    <div className="homepage-container">
+      <Row style={{ marginTop: "17vh" }}>
         <Col xxl={5} xl={5} lg={3} xs={2} md={3} sm={3} />
-        <h1 data-aos="fade-in" data-aos-duration="1500">
-          Home Page
-        </h1>
+        <Col
+          xxl={14}
+          xl={14}
+          lg={17}
+          xs={20}
+          md={18}
+          sm={18}
+          style={{
+            textAlign: "left",
+          }}
+        >
+          <p
+            className="blog-heading"
+            data-aos="fade"
+            data-aos-delay="600"
+            data-aos-once
+          >
+            <b>Blogs</b>
+          </p>
+          <p
+            data-aos="fade"
+            data-aos-delay="1000"
+            data-aos-once
+            className="blog-description"
+          >
+            A glimpse into my jumbled mess of a mind
+          </p>
+        </Col>
       </Row>
-      {listofblogs &&
-        listofblogs.map((blog, index) => {
-          return (
-            <IndividualBlog
-              key={index}
-              delay={index * 100}
-              heading={blog.heading}
-              description={blog.description}
-              link={blog.link}
-            />
-          );
-        })}
+      <div style={{ marginTop: "50px" }}>
+        {listofblogs &&
+          listofblogs.map((blog, index) => {
+            return (
+              <IndividualBlog
+                key={index}
+                delay={index * 100}
+                heading={blog.heading}
+                description={blog.description}
+                link={blog.link}
+              />
+            );
+          })}
+      </div>
     </div>
   );
 };

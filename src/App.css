@@ -1,1 +1,7 @@
 @import '~antd/dist/antd.css';
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+body{
+    background-color: #1f1f1f;
+    font-family: "Poppins", sans-serif;
+    color:white;
+}
