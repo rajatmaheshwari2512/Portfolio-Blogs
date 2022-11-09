@@ -14,18 +14,14 @@ export const HomePage = () => {
     axios
       .get(`${process.env.REACT_APP_BACKEND_URL}`)
       .then((resp) => {
-        resp.data = resp.data.split("\n");
-        resp.data.shift();
         let blogData = [];
         resp.data.map((blog) => {
-          blog = blog.split(",");
           return blogData.push({
             heading: blog[0],
             description: blog[1],
             link: blog[2],
           });
         });
-        blogData.pop();
         setListOfBlogs(blogData);
       })
       .catch((err) => {
@@ -66,7 +62,7 @@ export const HomePage = () => {
           </p>
         </Col>
       </Row>
-      <div style={{ marginTop: "50px" }}>
+      <div style={{ marginTop: "20px" }}>
         {listofblogs &&
           listofblogs.map((blog, index) => {
             return (

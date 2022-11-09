@@ -23,53 +23,6 @@
 #logo {
     animation: fill 0.4s ease forwards 1.2s;
 }
-
-.link {
-    font-size: 16px;
-}
-
-@media screen and (min-width: 3840px) {
-    .link {
-        font-size: 24px;
-    }
-}
-
-@media screen and (max-width: 1520px) {
-    .link {
-        font-size: 17px;
-    }
-}
-
-@media screen and (max-width: 1450px) {
-    .link {
-        font-size: 16px;
-    }
-}
-
-@media screen and (max-width: 1400px) {
-    .link {
-        font-size: 15px;
-    }
-}
-
-@media screen and (max-width: 1359px) {
-    .link {
-        font-size: 14px;
-    }
-}
-
-@media screen and (max-width: 502px) {
-    .nav {
-        margin-left: 50%;
-    }
-}
-
-@media screen and (max-width: 492px) {
-    .nav {
-        margin-top: -70px;
-    }
-}
-
 .ant-layout-header{
     background-color: #1f1f1f;
 }

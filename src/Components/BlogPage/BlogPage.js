@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
+import "./BlogPage.css";
+
 import { evaluate } from "@mdx-js/mdx";
 import * as runtime from "react/jsx-runtime";
 import axios from "axios";
@@ -25,9 +27,16 @@ export const BlogPage = () => {
         setBlog(resp.data);
       });
     }
-  }, []);
+  }, [link]);
 
   const exports = useMDX(blog);
   const Content = exports.default;
-  return <Content />;
+  return (
+    <Row style={{ marginTop: "17vh" }}>
+      <Col xxl={5} xl={5} lg={3} xs={2} md={3} sm={3} />
+      <Col xxl={13} xl={15} lg={18} xs={20} md={18} sm={18}>
+        <Content />
+      </Col>
+    </Row>
+  );
 };

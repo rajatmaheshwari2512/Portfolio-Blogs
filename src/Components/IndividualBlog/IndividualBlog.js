@@ -8,7 +8,7 @@ export const IndividualBlog = ({ heading, description, delay, link }) => {
   return (
     <Row style={{ paddingBottom: "2%" }}>
       <Col xxl={5} xl={5} lg={3} xs={2} md={3} sm={3} />
-      <Col xxl={6} xl={6} lg={18} xs={20} md={18} sm={18}>
+      <Col xxl={13} xl={15} lg={18} xs={20} md={18} sm={18}>
         <div
           className="individual-blog-container"
           style={{ cursor: "pointer" }}
@@ -19,7 +19,7 @@ export const IndividualBlog = ({ heading, description, delay, link }) => {
           data-aos-once
         >
           <h2 className="blog-titles">{heading}</h2>
-          <p>{description}</p>
+          <p className="description">{description}</p>
         </div>
       </Col>
       <Col lg={3} xs={2} md={3} sm={3} />

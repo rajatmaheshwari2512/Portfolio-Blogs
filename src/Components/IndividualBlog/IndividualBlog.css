@@ -1,8 +1,13 @@
 .blog-titles{
     color:white;
+    font-size: 40px;
 }
 .individual-blog-container{
-    height: 100px;
-    /* box-shadow: 0 0 10px black; */
+    max-height: 300px;
+    /* padding: 2%; */
     overflow: hidden;
+}
+.description{
+    color:#a8a4a4;
+    font-size: 20px;
 }
