@@ -10,7 +10,7 @@ export const Navbar = () => {
         <Row style={{ height: "100%", marginTop: "1%" }}>
           <Col xxl={2} xl={2} lg={2} xs={1} md={2} sm={1} />
           <Col xxl={18} xl={18} lg={18} xs={22} md={20} sm={22}>
-            <a href="/">
+            <a href="https://rajatmaheshwari.tech">
               <svg
                 id="logo"
                 width="40%"

@@ -4,10 +4,36 @@
 }
 .individual-blog-container{
     max-height: 300px;
-    /* padding: 2%; */
     overflow: hidden;
 }
 .description{
     color:#a8a4a4;
     font-size: 20px;
+}
+@media screen and (max-width: 878px) {
+    .blog-titles {
+        font-size: 30px;
+    }
+    .description {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 702px) {
+
+    .blog-titles {
+        font-size: 25px;
+    }
+    .description {
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 474px) {
+    .blog-titles {
+        font-size: 20px;
+    }
+    .description {
+        font-size: 15px;
+    }
 }
