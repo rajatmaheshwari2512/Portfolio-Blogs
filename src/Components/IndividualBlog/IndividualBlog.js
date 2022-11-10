@@ -11,7 +11,7 @@ export const IndividualBlog = ({ heading, description, delay, link }) => {
       <Col xxl={13} xl={15} lg={18} xs={20} md={18} sm={18}>
         <div
           className="individual-blog-container"
-          style={{ cursor: "pointer" }}
+          // style={{ cursor: "pointer" }}
           onClick={() => navigate(`/${link}`)}
           data-aos="fade-up"
           data-aos-delay={delay}
