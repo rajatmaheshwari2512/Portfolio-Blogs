@@ -5,6 +5,18 @@
     font-size: 50px;
     margin-top: -60px;
 }
+
+@media screen and (max-width: 1750px) {
+    .blog-heading {
+        font-size: 60px;
+    }
+
+    .blog-description {
+        font-size: 40px;
+        margin-top: -50px;
+    }
+}
+
 @media screen and (max-width: 1140px) {
     .blog-heading {
         font-size: 60px;

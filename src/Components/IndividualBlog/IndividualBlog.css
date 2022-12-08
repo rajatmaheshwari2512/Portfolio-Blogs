@@ -10,6 +10,16 @@
     color:#a8a4a4;
     font-size: 20px;
 }
+
+@media screen and (max-width: 1750px) {
+    .blog-titles {
+        font-size: 30px;
+    }
+    .description {
+        font-size: 20px;
+    }
+}
+
 @media screen and (max-width: 878px) {
     .blog-titles {
         font-size: 30px;
